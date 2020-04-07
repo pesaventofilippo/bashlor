@@ -1,0 +1,112 @@
+html, body {
+	height: 100%;
+	width: 100%;
+	margin: 0;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	font-family: 'Roboto', sans-serif;
+	background-color: #eeeeee;
+}
+
+h1 { margin-bottom: 3vh; font-size: 3em; }
+
+
+
+/* Common */
+.section {
+	height: max-content;
+	width: 70vw;
+
+	margin-top: 2vh;
+	margin-bottom: 2vh;
+	border: 1px solid black;
+	border-radius: 5px;
+	padding: 1vh 1vw 1vh 1vw;
+
+	background-color: #bdbdbd;
+}
+
+.block {
+	display: inline-flex;
+	justify-content: center;
+
+	padding: 3px 7px 3px 7px;
+	border-radius: 8px;
+	border: 1px solid black;
+
+	cursor: pointer;
+	font-size: .9em;
+}
+
+#black   { background-color: black;   color: white; }
+#red     { background-color: red;     color: white; }
+#green   { background-color: green;   color: white; }
+#yellow  { background-color: yellow;  color: black; }
+#blue    { background-color: blue;    color: white; }
+#magenta { background-color: magenta; color: white; }
+#cyan    { background-color: cyan;    color: black; }
+
+
+
+/* First Section */
+#PS1-section { display: flex; align-items: center; background-color: #212121; color: white; }
+.not-editable { height: min-content; font-size: 2em; }
+
+#PS1-editor {
+	height: 100%;
+	width: 100%;
+
+	display: flex;
+	align-items: center;
+
+	margin-left: 1vw;
+	margin-right: 1vw;
+	border-bottom: 1px solid;
+
+	outline: none;
+}
+
+#PS1-editor .block { border: 1px solid white; }
+#PS1-editor span:not([class=block]) { font-size: 1.2em; }
+#PS1-editor span:last-child { min-height: 10px; min-width: 10px; }
+
+
+/* Second Section */
+#cheat-sheet { font-size: 1.2em; }
+#cheat-sheet .row { margin-bottom: .5vh; }
+#cheat-sheet .spacer { margin-bottom: 4vh; }
+#cheat-sheet #title { font-size: 2em; }
+#cheat-sheet #subtitle { font-size: .8em; }
+
+
+
+/* Third Section */
+#buttons-section {
+	width: 70vw;
+	display: flex;
+	justify-content: space-evenly;
+}
+
+#buttons-section span {
+	height: max-content;
+	width: 20vw;
+
+	display: grid;
+	justify-content: center;
+
+	margin-top: 2vh;
+	margin-bottom: 2vh;
+	border: 1px solid black;
+	border-radius: 5px;
+	padding: 1vh 1vw 1vh 1vw;
+
+	font-size: 2em;
+	background-color: #bdbdbd;
+	cursor: pointer;
+}

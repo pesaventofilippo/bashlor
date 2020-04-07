@@ -11,39 +11,62 @@
 		<meta name="author" content="Gianluca Parri & Filippo Pesavento">
 
 		<!-- Imports -->
-		<link rel="stylesheet" href="assets/css/main.css">
+		<script type="text/javascript" src="assets/main.js"></script>
+		<link rel="stylesheet" href="assets/main.css">
 		<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 	</head>
 
 	<body>
 		<h1>Bashlor</h1>
 
-		<div class="box" id="ps1"><span class="not-editable">PS1='</span><span class="editable" contenteditable="true">\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\$\[\033[00m\]</span><span class="not-editable">'</span></div>
+		<div class="section" id="PS1-section">
+			<span class="not-editable">PS1='</span>
+			<span id="PS1-editor" contenteditable="true" spellcheck="false">
+				<span id="PS1-editor" spellcheck="false" contenteditable="true">
+				<span class="block" id="blue" contenteditable="false">blue</span>
+				<span style="color: blue;" contenteditable="true">[</span>
+				<span class="block" id="green" contenteditable="false">green</span>
+				<span style="color: green;" contenteditable="true"></span>
+				<span class="block" id="username" contenteditable="false">username</span>
+				<span style="color: green;" contenteditable="true">&nbsp;</span>
+				<span class="block" id="blue" contenteditable="false">blue</span>
+				<span style="color: blue;" contenteditable="true"></span>
+				<span class="block" id="path" contenteditable="false">path</span>
+				<span style="color: blue;" contenteditable="true">]$&nbsp;</span>
+				<span class="block" id="reset" contenteditable="false">reset</span>
+				<span contenteditable="true"></span></span>
+			</span>
+			<span class="not-editable">'</span>
+		</div>
 
-		<div class="box" id="cheat-sheet">
+		<div class="section" id="cheat-sheet">
 			<div id="title" class="row">Cheat Sheet</div>
-			<div class="row spacer"></div>
+			<div class="spacer"></div>
 
 			<div id="subtitle" class="row">Colors</div>
 			<div class="row">
-				<span id="green">green</span>
-				<span id="blue">blue</span>
-				<span id="red">red</span>
-				<span id="yellow">yellow</span>
-				<span id="magenta">magenta</span>
-				<span id="black">black</span>
-				<span id="color-reset">RESET</span>
+				<span class="block" id="black" onclick="write_block('black');">Black</span>
+				<span class="block" id="red" onclick="write_block('red');">Red</span>
+				<span class="block" id="green" onclick="write_block('green');">Green</span>
+				<span class="block" id="yellow" onclick="write_block('yellow');">Yellow</span>
+				<span class="block" id="blue" onclick="write_block('blue');">Blue</span>
+				<span class="block" id="magenta" onclick="write_block('magenta');">Magenta</span>
+				<span class="block" id="cyan" onclick="write_block('cyan');">Cyan</span>
+				<span class="block" id="reset" onclick="write_block('reset');">RESET</span>
 			</div>
-			<div class="row spacer"></div>
+			<div class="spacer"></div>
 
 			<div id="subtitle" class="row">Escapes</div>
 			<div class="row">
-				<span id="hostname">hostname</span>
-				<span id="username">username</span>
-				<span id="path">path</span>
+				<span class="block" id="hostname" onclick="write_block('hostname');">hostname</span>
+				<span class="block" id="username" onclick="write_block('username');">username</span>
+				<span class="block" id="path" onclick="write_block('path');">path</span>
 			</div>
 		</div>
 
-		<div class="box" id="try-button">Try it</div>
+		<div id="buttons-section">
+			<span id="try-button">Try it</span>
+			<span id="view-button">View Source</span>
+		</div>
 	</body>
 </html>
